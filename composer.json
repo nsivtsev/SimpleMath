@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "nsivtsev\\SimpleMath\\": "src/"
+            "nsivtsev\\SimpleMathBundle\\": "src/"
         }
     }
 }
