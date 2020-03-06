@@ -4,7 +4,7 @@ namespace nsivtsev\SimpleMathBundle\Entity;
 
 class Math implements MathInterface
 {
-    public function solve(string $problem)
+    public function solveFromString(string $problem)
     {
         return "OLOLO";
     }
