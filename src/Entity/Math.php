@@ -133,7 +133,6 @@ class Math implements MathInterface
 
             elseif ($value=="(") //встреили скобку ОТкрывающую
             {
-                dd($value);
                 /*Мы встретили ОТкрывающую скобку - надо просто поместить ее в стек*/
                 $stack[] = $value;
                 $lastnum = FALSE; // указываем, что последним была НЕ цифра
@@ -174,7 +173,7 @@ class Math implements MathInterface
         {
             $rpn[]=$stack_el;
         }
-
+        dd($rpn);
         return $this->calc(implode(" ", $rpn));
     }
 
