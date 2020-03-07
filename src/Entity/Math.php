@@ -45,7 +45,7 @@ class Math implements MathInterface
         if (preg_match("/[\+\-\*\/\^]/",$token['0'])){array_unshift($token, "0");}
 
         $lastnum = TRUE; //в выражении теперь точно первым будет идти число - поставим маркер
-        dd($token);
+
         foreach ($token as $key=>$value)
         {
 
@@ -133,6 +133,7 @@ class Math implements MathInterface
 
             elseif ($value=="(") //встреили скобку ОТкрывающую
             {
+                dd($value);
                 /*Мы встретили ОТкрывающую скобку - надо просто поместить ее в стек*/
                 $stack[] = $value;
                 $lastnum = FALSE; // указываем, что последним была НЕ цифра
