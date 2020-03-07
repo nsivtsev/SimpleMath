@@ -13,7 +13,7 @@ class Math implements MathInterface
     {
     }
 
-    public function solveFromString(string $problem)
+    public function solve(string $problem)
     {
         return $this->rpn($problem);
     }
