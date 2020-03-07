@@ -2,6 +2,8 @@
 
 namespace nsivtsev\SimpleMathBundle\Entity;
 
+use function Couchbase\defaultDecoder;
+
 class Math implements MathInterface
 {
     /**
@@ -48,6 +50,7 @@ class Math implements MathInterface
 
             if (preg_match("/[\+\-\*\/\^]/",$value))//если встретили оператор
             {
+                dd($value);
                 $endop = FALSE; //маркер конца цикла разбора операторов
 
                 while ($endop != TRUE)
