@@ -50,7 +50,6 @@ class Math implements MathInterface
 
         foreach ($token as $key=>$value)
         {
-            dump($value);
             if (preg_match("/[\+\-\*\/\^]/",$value))//если встретили оператор
             {
                 $endop = FALSE; //маркер конца цикла разбора операторов
