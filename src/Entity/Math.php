@@ -35,6 +35,8 @@ class Math implements MathInterface
             "/"=> array("prior" => "3", "assoc" => "left"),
             "+"=> array("prior" => "2", "assoc" => "left"),
             "-"=> array("prior" => "2", "assoc" => "left"),
+            "("=> array("prior" => "1", "assoc" => "left"),
+            ")"=> array("prior" => "1", "assoc" => "left"),
         );
 
         $token=preg_replace("/\s/", "", $str); //удалим все пробелы
@@ -56,7 +58,6 @@ class Math implements MathInterface
                 while ($endop != TRUE)
                 {
                     $lastop = array_pop($stack);
-                    dump($lastop);
                     if ($lastop=="")
                     {
                         $stack[]=$value; //если в стеке нет операторов - просто записываем текущий оператор в стек
