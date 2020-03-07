@@ -55,6 +55,7 @@ class Math implements MathInterface
 
                 while ($endop != TRUE)
                 {
+                    dump($lastop);
                     $lastop = array_pop($stack);
                     if ($lastop=="")
                     {
