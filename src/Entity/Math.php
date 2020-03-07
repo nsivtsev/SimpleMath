@@ -45,12 +45,12 @@ class Math implements MathInterface
         if (preg_match("/[\+\-\*\/\^]/",$token['0'])){array_unshift($token, "0");}
 
         $lastnum = TRUE; //в выражении теперь точно первым будет идти число - поставим маркер
+        dd($token);
         foreach ($token as $key=>$value)
         {
 
             if (preg_match("/[\+\-\*\/\^]/",$value))//если встретили оператор
             {
-                dd($value);
                 $endop = FALSE; //маркер конца цикла разбора операторов
 
                 while ($endop != TRUE)
