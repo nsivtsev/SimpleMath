@@ -48,7 +48,7 @@ class Math implements MathInterface
 
         foreach ($token as $key=>$value)
         {
-
+            dump($token);
             if (preg_match("/[\+\-\*\/\^]/",$value))//если встретили оператор
             {
                 $endop = FALSE; //маркер конца цикла разбора операторов
@@ -173,7 +173,6 @@ class Math implements MathInterface
         {
             $rpn[]=$stack_el;
         }
-        dd($rpn);
         return $this->calc(implode(" ", $rpn));
     }
 
