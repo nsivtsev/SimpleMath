@@ -55,8 +55,8 @@ class Math implements MathInterface
 
                 while ($endop != TRUE)
                 {
-                    dump($lastop);
                     $lastop = array_pop($stack);
+                    dump($lastop);
                     if ($lastop=="")
                     {
                         $stack[]=$value; //если в стеке нет операторов - просто записываем текущий оператор в стек
