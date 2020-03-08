@@ -1,6 +1,6 @@
 <?php
 
-namespace nsivtsev\SimpleMathBundle\Entity;
+namespace nsivtsev\SimpleMathBundle\Util;
 
 interface MathInterface
 {
