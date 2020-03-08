@@ -43,4 +43,5 @@ class DefaultController extends AbstractController
   ```
   
   Автор: Николай Сивцев
+  
   Если есть замечания, буду рад получить в [Issues](https://github.com/nsivtsev/SimpleMath/issues) либо в [Telegram](https://teleg.run/favorit_ykt)
