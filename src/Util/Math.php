@@ -2,7 +2,7 @@
 
 namespace nsivtsev\SimpleMathBundle\Util;
 
-use ReversePolishNotation;
+use nsivtsev\SimpleMathBundle\Util\ReversePolishNotation;
 
 class Math implements MathInterface
 {

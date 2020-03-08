@@ -35,7 +35,7 @@ class MathTest extends TestCase
 
     public function testNotAllowedSymbolThrowsException()
     {
-        $this->expectException(Exception::class);
+        $this->expectException();
         $calculator = new Math();
         $calculator->solve("2+2!1");
     }
