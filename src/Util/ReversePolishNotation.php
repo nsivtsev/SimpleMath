@@ -2,6 +2,8 @@
 
 namespace nsivtsev\SimpleMathBundle\Util;
 
+use Symfony\Component\Config\Definition\Exception\Exception;
+
 class ReversePolishNotation
 {
     /**
