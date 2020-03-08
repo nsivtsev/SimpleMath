@@ -1,5 +1,7 @@
 <?php
 
+namespace nsivtsev\SimpleMathBundle\Util;
+
 class ReversePolishNotation
 {
     /**
