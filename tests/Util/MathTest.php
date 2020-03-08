@@ -2,8 +2,11 @@
 
 namespace nsivtsev\SimpleMathBundle\Tests\Util;
 
+use ErrorException;
 use nsivtsev\SimpleMathBundle\Util\Math;
+use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Warning;
 
 class MathTest extends TestCase
 {
@@ -15,19 +18,25 @@ class MathTest extends TestCase
         $this->assertEquals(6, $result);
     }
 
-    public function testBrackets()
+    public function testBracketsRunsFirst()
     {
         $calculator = new Math();
-        $result = $calculator->solve("(2+2)*2");
+        $result = $calculator->solve("2+(2+2)*2");
 
-        $this->assertEquals(8, $result);
+        $this->assertEquals(10, $result);
     }
 
-    public function testZeroDivision()
+    public function testZeroDivisionThrowsException()
     {
+        $this->expectException(Exception::class);
         $calculator = new Math();
-        $result = $calculator->solve("2*0");
+        $calculator->solve("2/0");
+    }
 
-        $this->assertEquals(0, $result);
+    public function testNotAllowedSymbolThrowsException()
+    {
+        $this->expectException(Exception::class);
+        $calculator = new Math();
+        $calculator->solve("2+2!1");
     }
 }
