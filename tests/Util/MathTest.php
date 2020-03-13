@@ -2,7 +2,7 @@
 
 namespace nsivtsev\SimpleMathBundle\Tests\Util;
 
-use nsivtsev\SimpleMathBundle\Util\Math;
+use nsivtsev\SimpleMathBundle\Services\Math;
 use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\TestCase;
 use Exeption;
