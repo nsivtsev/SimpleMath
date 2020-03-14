@@ -1,9 +1,5 @@
 services:
-  _defaults:
+  nsivtsev\SimpleMathBundle\Math:
     autowire: true
     autoconfigure: true
     public: true
-
-  nsivtsev\SimpleMathBundle\Math:
-    resource: '../../*'
-    tags: ['math.service']
