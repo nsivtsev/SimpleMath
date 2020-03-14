@@ -1,5 +1,5 @@
 <?php
-namespace App\Service;
+namespace nsivtsev\SimpleMathBundle\Service;
 
 use Symfony\Component\Process\Exception\RuntimeException;
 
