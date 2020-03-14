@@ -2,7 +2,6 @@
 namespace nsivtsev\SimpleMathBundle\Service;
 
 use Symfony\Component\Process\Exception\RuntimeException;
-use nsivtsev\SimpleMathBundle\Service\Parenthesis;
 
 abstract class TerminalExpression {
 
