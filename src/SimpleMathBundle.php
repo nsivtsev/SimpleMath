@@ -6,8 +6,10 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class SimpleMathBundle extends Bundle
 {
-    public function calculate(string $problem)
+    public function build(ContainerBuilder $container)
     {
-        return $problem;
+        parent::build($container);
+        $container->registerForAutoconfiguration(Math::class)->addTag(Math::TAG);
     }
+
 }
