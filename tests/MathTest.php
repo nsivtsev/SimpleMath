@@ -4,7 +4,12 @@ namespace nsivtsev\SimpleMathBundle\tests;
 
 use nsivtsev\SimpleMathBundle\Math;
 use nsivtsev\SimpleMathBundle\Service\Evaluator;
-use nsivtsev\SimpleMathBundle\SimpleMathBundle;
+use nsivtsev\SimpleMathBundle\Service\Parenthesis;
+use nsivtsev\SimpleMathBundle\Service\Number;
+use nsivtsev\SimpleMathBundle\Service\Addition;
+use nsivtsev\SimpleMathBundle\Service\Subtraction;
+use nsivtsev\SimpleMathBundle\Service\Multiplication;
+use nsivtsev\SimpleMathBundle\Service\Division;
 use PHPUnit\Framework\TestCase;
 
 class MathTest extends TestCase
