@@ -1,13 +1,13 @@
 <?php
 namespace nsivtsev\SimpleMathBundle;
 
-use nsivtsev\SimpleMathBundle\Evaluator;
+use nsivtsev\SimpleMathBundle\Utils\Evaluator;
 
 class Math
 {
     public function calculate(string $problem)
     {
-        $math = new \Evaluator();
+        $math = new Evaluator();
 
         return $math->evaluate($problem);
     }
