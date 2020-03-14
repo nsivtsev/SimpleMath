@@ -1,9 +1,7 @@
 <?php
 namespace nsivtsev\SimpleMathBundle;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
-
-class SimpleMathBundle extends Bundle
+class Math
 {
     public function calculate(string $problem)
     {
