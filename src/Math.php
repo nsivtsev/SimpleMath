@@ -24,7 +24,7 @@ class Math
      * @param string $problem
      * @return string
      */
-    public function calculate(string $problem)
+    public function solve(string $problem)
     {
         return $this->calculator->evaluate($problem);
     }

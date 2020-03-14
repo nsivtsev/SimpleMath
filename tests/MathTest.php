@@ -34,7 +34,7 @@ class MathTest extends TestCase
         $result = ($arg1 + $arg2 * $arg3) / $arg4;
         $str = "(".$arg1." + ".$arg2." * ".$arg3.") / ".$arg4;
 
-        $this->assertEquals($result, $math->evaluate($str));
+        $this->assertEquals($result, $math->solve($str));
     }
 
 //    public function testPrior()
