@@ -23,8 +23,9 @@ class MathTest extends TestCase
 //    dump($math->calculate('0.1 + 2.1'));
 //    dump($math->calculate('-1000 + 1'));
 
-    public function testRandomCalculations(Math $math)
+    public function testRandomCalculations()
     {
+        $math = new Math();
         $arg1 = mt_rand();
         $arg2 = mt_rand();
         $arg3 = mt_rand();
@@ -33,7 +34,7 @@ class MathTest extends TestCase
         $result = ($arg1 + $arg2 * $arg3) / $arg4;
         $str = "(".$arg1." + ".$arg2." * ".$arg3.") / ".$arg4;
 
-        $this->assertEquals($result, $this->calculator->evaluate($str));
+        $this->assertEquals($result, $math->evaluate($str));
     }
 
 //    public function testPrior()
