@@ -2,9 +2,8 @@
 namespace nsivtsev\SimpleMathBundle;
 
 use nsivtsev\SimpleMathBundle\Utils\Evaluator;
-use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class Math extends Bundle
+class Math
 {
     public function calculate(string $problem)
     {
