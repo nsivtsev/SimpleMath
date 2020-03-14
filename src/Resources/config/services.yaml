@@ -1,5 +1,4 @@
 services:
-  nsivtsev\SimpleMathBundle\:
+  nsivtsev\SimpleMathBundle\Math:
     autowire: true
     autoconfigure: true
-    public: true
