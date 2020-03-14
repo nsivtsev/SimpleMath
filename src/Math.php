@@ -9,22 +9,20 @@ class Math
 
     /**
      * Math constructor.
-     * @param null $calculator
+     * @param Evaluator $evaluator
      */
-    public function __construct($calculator = null)
+    public function __construct(Evaluator $evaluator)
     {
-        if (!$calculator)
-            $this->calculator = new Evaluator();
-        else
-            $this->calculator = $calculator;
+        $this->calculator = $evaluator;
     }
 
     /**
      * Вычисление из входящей строки
      * @param string $problem
+     * @param Math $math
      * @return string
      */
-    public function solve(string $problem)
+    public function solve(string $problem, Math $math)
     {
         return $this->calculator->evaluate($problem);
     }

@@ -3,9 +3,7 @@
 namespace nsivtsev\SimpleMathBundle\Tests;
 
 use nsivtsev\SimpleMathBundle\Math;
-use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\TestCase;
-use Exeption;
 
 class MathTest extends TestCase
 {
