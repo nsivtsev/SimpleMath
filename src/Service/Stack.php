@@ -1,5 +1,5 @@
 <?php
-namespace nsivtsev\SimpleMathBundle\Utils;
+namespace nsivtsev\SimpleMathBundle\Service;
 
 class Stack
 {
