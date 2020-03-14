@@ -22,15 +22,6 @@ class MathTest extends TestCase
 //    //dump($math->calculate('0.+.0'));
 //    dump($math->calculate('0.1 + 2.1'));
 //    dump($math->calculate('-1000 + 1'));
-    /**
-     * MathTest constructor.
-     */
-    private $calculator = null;
-
-    public function __construct(Math $math)
-    {
-        $this->calculator = $math;
-    }
 
     public function testRandomCalculations(Math $math)
     {
