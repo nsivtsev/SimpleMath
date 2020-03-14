@@ -1,5 +1,5 @@
 <?php
-namespace nsivtsev\SimpleMathBundle;
+namespace nsivtsev\SimpleMathBundle\Utils;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

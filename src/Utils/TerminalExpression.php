@@ -1,5 +1,9 @@
 <?php
-namespace nsivtsev\SimpleMathBundle;
+namespace nsivtsev\SimpleMathBundle\Utils;
+
+use nsivtsev\SimpleMathBundle\Number;
+use nsivtsev\SimpleMathBundle\Addition;
+use nsivtsev\SimpleMathBundle\Subtraction;
 
 abstract class TerminalExpression {
 

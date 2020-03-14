@@ -1,7 +1,6 @@
 <?php
 
-use nsivtsev\SimpleMathBundle\Stack;
-use nsivtsev\SimpleMathBundle\TerminalExpression;
+namespace nsivtsev\SimpleMathBundle\Utils;
 
 class Evaluator {
 
