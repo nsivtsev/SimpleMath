@@ -19,10 +19,9 @@ class Math
     /**
      * Вычисление из входящей строки
      * @param string $problem
-     * @param Math $math
      * @return string
      */
-    public function solve(string $problem, Math $math)
+    public function solve(string $problem)
     {
         return $this->calculator->evaluate($problem);
     }
