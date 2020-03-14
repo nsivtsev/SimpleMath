@@ -10,7 +10,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $treeBuilder->root('health_check');
+        $treeBuilder->root('math');
         return $treeBuilder;
     }
 }
