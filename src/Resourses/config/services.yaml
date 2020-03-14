@@ -4,6 +4,6 @@ services:
     autoconfigure: true
     public: true
 
-  nsivtsev\SimpleMathBundle\:
+  nsivtsev\SimpleMathBundle\Math:
     resource: '../../*'
     tags: ['math.service']
