@@ -1,5 +1,5 @@
 <?php
-namespace nsivtsev\SimpleMathBundle\Service;
+namespace App\Service;
 
 class Parenthesis extends TerminalExpression {
 
