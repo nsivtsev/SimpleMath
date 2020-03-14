@@ -1,7 +1,7 @@
 <?php
 namespace nsivtsev\SimpleMathBundle\Utils;
 
-use http\Exception\RuntimeException;
+use Symfony\Component\Process\Exception\RuntimeException;
 
 abstract class TerminalExpression {
 
