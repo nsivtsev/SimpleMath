@@ -1,10 +1,9 @@
 <?php
 
-namespace nsivtsev\SimpleMathBundle\Tests;
+namespace nsivtsev\SimpleMathBundle\tests;
 
 use nsivtsev\SimpleMathBundle\Math;
-use nsivtsev\SimpleMathBundle\Service\Evaluator;
-use nsivtsev\SimpleMathBundle\Service\Parenthesis;
+use nsivtsev\SimpleMathBundle\SimpleMathBundle;
 use PHPUnit\Framework\TestCase;
 
 class MathTest extends TestCase
@@ -25,7 +24,7 @@ class MathTest extends TestCase
 
     public function testRandomCalculations()
     {
-        $math = new Math(new Evaluator());
+        $math = new Math();
         $arg1 = mt_rand();
         $arg2 = mt_rand();
         $arg3 = mt_rand();
