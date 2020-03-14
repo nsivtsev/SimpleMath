@@ -24,7 +24,7 @@ class MathTest extends TestCase
 
     public function testRandomCalculations()
     {
-        $math = new Evaluator();
+        $math = new Math();
         $arg1 = mt_rand();
         $arg2 = mt_rand();
         $arg3 = mt_rand();
