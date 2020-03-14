@@ -2,6 +2,8 @@
 
 namespace nsivtsev\SimpleMathBundle\Utils;
 
+use http\Exception\RuntimeException;
+
 class Evaluator {
 
     protected $variables = array();
