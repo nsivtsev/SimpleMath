@@ -1,4 +1,4 @@
 services:
-  nsivtsev\SimpleMathBundle\Math:
+  nsivtsev\SimpleMathBundle\:
     autowire: true
     autoconfigure: true
