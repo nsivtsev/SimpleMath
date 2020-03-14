@@ -1,12 +1,10 @@
 <?php
 
-namespace nsivtsev\SimpleMathBundle\Tests;
+namespace nsivtsev\SimpleMathBundle\Tests\Service;
 
-use nsivtsev\SimpleMathBundle\Math;
-use nsivtsev\SimpleMathBundle\Service\Evaluator;
 use PHPUnit\Framework\TestCase;
 
-class MathTest extends TestCase
+class EvaluatorTest extends TestCase
 {
 
 //    dump($math->calculate('2+2*2'));
@@ -33,7 +31,7 @@ class MathTest extends TestCase
         $result = ($arg1 + $arg2 * $arg3) / $arg4;
         $str = "(".$arg1." + ".$arg2." * ".$arg3.") / ".$arg4;
 
-        $this->assertEquals($result, $math->solve($str));
+        $this->assertEquals($result, $math->evaluate($str));
     }
 
 //    public function testPrior()

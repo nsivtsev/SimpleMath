@@ -13,7 +13,8 @@
     },
     "autoload": {
         "psr-4": {
-            "nsivtsev\\SimpleMathBundle\\": "src/"
+            "nsivtsev\\SimpleMathBundle\\": "src/",
+            "nsivtsev\\SimpleMathBundle\\Tests\\": "tests/"
         }
     }
 }
