@@ -1,6 +1,8 @@
 <?php
 namespace nsivtsev\SimpleMathBundle\Utils;
 
+use http\Exception\InvalidArgumentException;
+
 abstract class TerminalExpression {
 
     protected $value = '';
@@ -25,7 +27,7 @@ abstract class TerminalExpression {
         } elseif (in_array($value, array('(', ')'))) {
             return new Parenthesis($value);
         }
-        throw new Exception('Undefined Value ' . $value);
+        throw new InvalidArgumentException('Undefined Value ' . $value);
     }
 
     abstract public function operate(Stack $stack);
