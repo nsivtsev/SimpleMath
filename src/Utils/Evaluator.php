@@ -2,7 +2,7 @@
 
 namespace nsivtsev\SimpleMathBundle\Utils;
 
-use http\Exception\RuntimeException;
+use Symfony\Component\Process\Exception\RuntimeException;
 
 class Evaluator {
 
