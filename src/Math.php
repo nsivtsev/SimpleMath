@@ -5,15 +5,18 @@ use nsivtsev\SimpleMathBundle\Service\Evaluator;
 
 class Math
 {
-    private $calculator = null;
+    private $calculator;
 
     /**
      * Math constructor.
-     * @param Evaluator $evaluator
+     * @param null $calculator
      */
-    public function __construct(Evaluator $evaluator)
+    public function __construct($calculator = null)
     {
-        $this->calculator = $evaluator;
+        if (!$calculator)
+            $this->calculator = new Evaluator();
+        else
+            $this->calculator = $calculator;
     }
 
     /**
