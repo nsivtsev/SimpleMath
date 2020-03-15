@@ -1,6 +1,12 @@
 <?php
 namespace nsivtsev\SimpleMathBundle\Service\Evaluator;
 
+use nsivtsev\SimpleMathBundle\Service\Evaluator\Expressions\Addition;
+use nsivtsev\SimpleMathBundle\Service\Evaluator\Expressions\Division;
+use nsivtsev\SimpleMathBundle\Service\Evaluator\Expressions\Multiplication;
+use nsivtsev\SimpleMathBundle\Service\Evaluator\Expressions\Number;
+use nsivtsev\SimpleMathBundle\Service\Evaluator\Expressions\Parenthesis;
+use nsivtsev\SimpleMathBundle\Service\Evaluator\Expressions\Subtraction;
 use Symfony\Component\Process\Exception\RuntimeException;
 
 abstract class TerminalExpression {
