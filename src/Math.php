@@ -1,7 +1,8 @@
 <?php
 namespace nsivtsev\SimpleMathBundle;
 
-use nsivtsev\SimpleMathBundle\Service\Evaluator;
+
+use nsivtsev\SimpleMathBundle\Service\Evaluator\Evaluator;
 
 class Math
 {

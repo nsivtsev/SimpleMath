@@ -1,5 +1,5 @@
 <?php
-namespace nsivtsev\SimpleMathBundle\Service;
+namespace nsivtsev\SimpleMathBundle\Service\Evaluator;
 
 class Stack
 {
