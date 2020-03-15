@@ -34,13 +34,18 @@ class DefaultController extends AbstractController
     /**
      * @Route("/", name="app_index")
      */
-    public function index()
+    public function index(Math $math)
     {
-        $math = new Math();
         dump($math->solve('(2+2)*2'));
     }
 }
   ```
+  
+  ### UPD
+  Исправления:
+- Бандл зарегистрирован как сервис, autowiring, можно использовать DI
+- Алгоритм вычисления заменен на "алгоритм сортировочной станции" (Shunting-yard algorithm) На основе исходников: https://gist.github.com/dremie/fcb1f5beecc327679de8cca51c8e4743
+- Дописаны тесты
   
   Автор: Николай Сивцев
   
