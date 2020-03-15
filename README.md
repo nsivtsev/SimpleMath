@@ -25,7 +25,7 @@
   <?php
 namespace App\Controller;
 
-use nsivtsev\SimpleMathBundle\Services\Math;
+use nsivtsev\SimpleMathBundle\Math;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
