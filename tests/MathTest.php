@@ -36,29 +36,30 @@ class MathTest extends TestCase
         $this->assertEquals($result, $math->solve($str));
     }
 
-//    public function testPrior()
-//    {
-//        $result = $calculator->solve("2+2*2");
-//
-//        $this->assertEquals(6, $result);
-//    }
-//
-//    public function testBracketsRunsFirst()
-//    {
-//        $calculator = new Math();
-//
-//        $result = $calculator->solve("2+(2+2)*2");
-//
-//        $this->assertEquals(10, $result);
-//    }
-//
-//    public function testZeroDivisionThrowsException()
-//    {
-//        $calculator = new Math();
-//
-//        $this->expectException(Exception::class);
-//        $calculator->solve("2/0");
-//    }
+    public function testPrior()
+    {
+        $calculator = new Math(new Evaluator());
+        $result = $calculator->solve("2+2*2");
+
+        $this->assertEquals(6, $result);
+    }
+
+    public function testParenthesisRunsFirst()
+    {
+        $calculator = new Math();
+
+        $result = $calculator->solve("2+(2+2)*2");
+
+        $this->assertEquals(10, $result);
+    }
+
+    public function testZeroDivisionThrowsException()
+    {
+        $calculator = new Math();
+
+        $this->expectException(Exception::class);
+        $calculator->solve("2/0");
+    }
 //
 //    public function testNotEnoughtArgumentsThrowsException()
 //    {
