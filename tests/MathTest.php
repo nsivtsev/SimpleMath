@@ -2,7 +2,6 @@
 
 namespace nsivtsev\SimpleMathBundle\Tests;
 
-use http\Exception;
 use nsivtsev\SimpleMathBundle\Math;
 use nsivtsev\SimpleMathBundle\Service\Evaluator\Evaluator;
 use PHPUnit\Framework\TestCase;
@@ -58,7 +57,7 @@ class MathTest extends TestCase
     {
         $calculator = new Math(new Evaluator());
 
-        $this->expectException(Exception::class);
+        $this->expectException(\ErrorException::class);
         $calculator->solve("2/0");
     }
 //
