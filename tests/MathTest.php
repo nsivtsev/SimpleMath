@@ -31,7 +31,7 @@ class MathTest extends TestCase
         $arg4 = mt_rand();
 
         $result = ($arg1 + $arg2 * $arg3) / $arg4;
-        $str = "".$arg1." + ".$arg2." * ".$arg3." / ".$arg4;
+        $str = "(".$arg1." + ".$arg2." * ".$arg3.") / ".$arg4;
 
         $this->assertEquals($result, $math->solve($str));
     }
