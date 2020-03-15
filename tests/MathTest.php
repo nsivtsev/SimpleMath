@@ -3,7 +3,7 @@
 namespace nsivtsev\SimpleMathBundle\Tests;
 
 use nsivtsev\SimpleMathBundle\Math;
-use nsivtsev\SimpleMathBundle\Service\Evaluator;
+use nsivtsev\SimpleMathBundle\Service\Evaluator\Evaluator;
 use PHPUnit\Framework\TestCase;
 
 class MathTest extends TestCase
