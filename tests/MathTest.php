@@ -2,25 +2,16 @@
 
 namespace nsivtsev\SimpleMathBundle\Tests;
 
+use Error;
+use ErrorException;
+use InvalidArgumentException;
 use nsivtsev\SimpleMathBundle\Math;
 use nsivtsev\SimpleMathBundle\Service\Evaluator\Evaluator;
 use PHPUnit\Framework\TestCase;
+use RuntimeException;
 
 class MathTest extends TestCase
 {
-
-//    dump($math->calculate('2+2*2'));
-//    //dump($math->calculate('2+2/0'));
-//    dump($math->calculate('0000001'));
-//    //dump($math->calculate('(2+2'));
-//    //dump($math->calculate('000001 +'));
-//    dump($math->calculate('000001 + 000001'));
-//    //dump($math->calculate('aaaa'));
-//    //dump($math->calculate('1a+1'));
-//    //dump($math->calculate('.0+0.'));
-//    //dump($math->calculate('0.+.0'));
-//    dump($math->calculate('0.1 + 2.1'));
-//    dump($math->calculate('-1000 + 1'));
 
     public function testRandomCalculations()
     {
@@ -53,27 +44,60 @@ class MathTest extends TestCase
         $this->assertEquals(10, $result);
     }
 
+    /**
+     * @expectedException InvalidArgumentException
+     */
     public function testZeroDivisionThrowsException()
     {
         $calculator = new Math(new Evaluator());
 
-        $this->expectException(\ErrorException::class);
+        $this->expectException(InvalidArgumentException::class);
         $calculator->solve("2/0");
     }
-//
-//    public function testNotEnoughtArgumentsThrowsException()
-//    {
-//        $calculator = new Math();
-//
-//        $this->expectExceptionMessage('Недостаточно данных в стеке для операции');
-//        $calculator->solve("+");
-//    }
-//
-//    public function testInvalidSymbolThrowsException()
-//    {
-//        $calculator = new Math();
-//
-//        $this->expectExceptionMessage('Недостаточно данных в стеке для операции');
-//        $calculator->solve("3 +", true);
-//    }
+
+    public function testNotEnoughtArgumentsThrowsException()
+    {
+        $calculator = new Math(new Evaluator());
+
+        $this->expectException(Error::class);
+        $calculator->solve("+");
+    }
+
+    public function testInvalidSymbolThrowsException()
+    {
+        $calculator = new Math(new Evaluator());
+
+        $this->expectException(RuntimeException::class);
+        $calculator->solve("aaa");
+    }
+
+    public function testMissedParethesisThrowsException()
+    {
+        $calculator = new Math(new Evaluator());
+
+        $this->expectException(RuntimeException::class);
+        $calculator->solve("2+2+(2*21");
+    }
+
+    public function testNullsBeforeDigits()
+    {
+        $calculator = new Math(new Evaluator());
+
+        $this->assertEquals(1, $calculator->solve("00000001"));
+    }
+
+    public function testDotBefore()
+    {
+        $calculator = new Math(new Evaluator());
+
+        $this->assertEquals(1.01, $calculator->solve(".01 + 1"));
+    }
+
+    public function testDotAfterThrowsException()
+    {
+        $calculator = new Math(new Evaluator());
+
+        $this->expectException(RuntimeException::class);
+        $calculator->solve(".0 + 0.");
+    }
 }
