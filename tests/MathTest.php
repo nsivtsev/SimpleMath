@@ -46,7 +46,7 @@ class MathTest extends TestCase
 
     public function testParenthesisRunsFirst()
     {
-        $calculator = new Math();
+        $calculator = new Math(new Evaluator());
 
         $result = $calculator->solve("2+(2+2)*2");
 
@@ -55,7 +55,7 @@ class MathTest extends TestCase
 
     public function testZeroDivisionThrowsException()
     {
-        $calculator = new Math();
+        $calculator = new Math(new Evaluator());
 
         $this->expectException(Exception::class);
         $calculator->solve("2/0");
