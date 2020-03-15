@@ -1,6 +1,8 @@
 <?php
 namespace nsivtsev\SimpleMathBundle\Service\Evaluator\Expressions;
 
+use nsivtsev\SimpleMathBundle\Service\Evaluator\TerminalExpression;
+
 abstract class Operator extends TerminalExpression {
 
     protected $precidence = 0;
