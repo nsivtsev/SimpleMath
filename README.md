@@ -1,6 +1,9 @@
 # SimpleMath
 
 Библиотека для вычисления из строки string, использует алгоритм преобразования и вычисления из инфиксной записи в постфиксную (обратная Польская запись)
+Бандл зарегистрирован как сервис, autowiring, можно использовать DI
+Используется "алгоритм сортировочной станции" (Shunting-yard algorithm) На основе исходников: https://gist.github.com/dremie/fcb1f5beecc327679de8cca51c8e4743
+Unit тесты
 
 ### Требования:
 - Symfony 4.4
@@ -40,13 +43,8 @@ class DefaultController extends AbstractController
     }
 }
   ```
-  
-  ### UPD
-  Исправления:
-- Бандл зарегистрирован как сервис, autowiring, можно использовать DI
-- Алгоритм вычисления заменен на "алгоритм сортировочной станции" (Shunting-yard algorithm) На основе исходников: https://gist.github.com/dremie/fcb1f5beecc327679de8cca51c8e4743
-- Дописаны тесты
-  
+ 
+ 
   Автор: Николай Сивцев
   
   Если есть замечания, буду рад получить в [Issues](https://github.com/nsivtsev/SimpleMath/issues) либо в [Telegram](https://teleg.run/favorit_ykt)
